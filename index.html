@@ -1,124 +1,70 @@
 <html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECH_HUB</title>
-    <style>
-        /* Body styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* Header styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 4px;
-            text-align: center;
-            font: 1.5em ink free;
-        }
-
-        /* Navigation styles */
-        nav {
-            background-color: #666;
-            padding: 5px;
-            text-align: center;
-        }
-        
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Product styles */
-        section {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .product {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
-            width: 200px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .product h2 {
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .product p {
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .product button {
-            background-color: #eeb804;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .product button:hover {
-            background-color: #000000;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>TECH_HUB Main Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header >
-        <h2 >TECH_HUB</h2>
+    <header >   
+    <div>
+        <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><hr>
+        <a href="#section1">Login</a><hr>
+        <a href="index.html">Home</a><hr>
+        <a href="#section3">About Us</a><hr>
+        <a href="#section4">Contact Us</a><hr>
+        </div>
+    </div>
+
+    <table >
+        <section class="menu">
+            <div>
+                <span style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+            </div>
+            <div class="logo">
+                <a href="index.html" ><img src="1.png" width="200" height="40"></a>
+            </div>   
+            <div>
+                <a href="index.html" ><img src="carts.png" width="35" height="35"></a>
+            </div> 
+        </section>
+    </table>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.querySelector(".main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.querySelector(".main").style.marginLeft = "0";
+        }
+    </script>
+    
     </header>
-    <nav>
-        <a href="#">Home</a> |
-        <a href="#">Products</a> |
-        <a href="#">Contact</a>
-    </nav>
     <br>
-    <div class="search-bar" align="center">
-        <input type="text" placeholder="Search..." >
+    <div class="search-bar" align="center" >
+        <input type="text" placeholder="Search..." height="100">
         <button type="submit">Go</button>
     </div>
     <br>
 <table>
     <h1 align="center">Monitors</h1>
-    <section> 
+    <section class="box"> 
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/412Tyq+t2DL._SY300_SX300_.jpg" width="200" height="220">
             <h2>EX240N | MOBIUZ 1ms 165Hz Gaming Monitor</h2>
             <p>23.8" 1920x1080 16:9 HDR 165Hz 1080p Gaming Monitor
                 Smart HDRi image optimization plus dual 2.5W speaker audio</p>
             <p>₹13999.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51ljM1YucQL._SY300_SX300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -126,9 +72,14 @@
             <p>24 Inch Samsung Monitor - 1,920 x 1,080 Resolution
                 Aspect Ratio: 16:9 | 178° Horizontal and Vertical Viewing Angle</p>
             <p>₹12399.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51Ww4LHCm8L._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -136,9 +87,14 @@
             <p>Display: 24" Full HD (1920 x 1080) | Wide Angle (178 Deg)
                 Gaming Features: 144 Hz, AMD FreeSync , 1ms Refresh rate (GTG).</p>
             <p>₹12099.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41ooSixkSxL._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -150,9 +106,14 @@
                 16.7 Million Colors
                 Integrated Stereo Speakers</p>
             <p>₹14999.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/71rxX1CV65L._SY450_.jpg" width="200" height="200">
@@ -163,13 +124,18 @@
                 Built-in speakers and Headphone Jack
             </p>
             <p>₹23499.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
     </section>
     <h1 align="center">KeyBoards </h1>
-    <section> 
+    <section class="box"> 
         <div class="product">
             <br>
             <img src="https://m.media-amazon.com/images/I/41c7e1qfZSL._SY300_SX300_QL70_FMwebp_.jpg" width="200" height="180">
@@ -181,9 +147,14 @@
                 Win-Key Lock Windows Buttons can be disabled.</p>
                 <br>
                 <p>₹580.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+                <div class="button">
+                    <a href="Sorry.html">
+                        <button>Order Now</button>
+                    </a>
+                    <a href="Sorry.html">
+                        <button>Add to Cart</button>
+                    </a>
+                    </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41rcVdtmKAL._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -193,9 +164,14 @@
             <br>
             <br>
             <p>₹664.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41OStVhjIqL._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -210,9 +186,14 @@
                 <br>
                 <br>
             <p>₹681.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41uKJE+8m-L._SY300_SX300_.jpg" width="200" height="200">
@@ -221,10 +202,15 @@
             <br>
             <br>
             <br>
-            <p>₹849.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <p>₹590.00</p>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41xxPvP2fyL._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
@@ -235,61 +221,91 @@
                  Switch: blue switch                
                  Connection: detachable type-c wired</p>
             <p>₹2499.00</p>
-            <a href="Sorry.html">
-                <button>Order Now</button>
-            </a>
+            <div class="button">
+                <a href="Sorry.html">
+                    <button>Order Now</button>
+                </a>
+                <a href="Sorry.html">
+                    <button>Add to Cart</button>
+                </a>
+                </div>
         </div>
     </section>
     <h1 align="center">Mouse</h1>
-    <section> 
+    <section class="box"> 
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/41I-azRJBLL._SX300_SY300_QL70_FMwebp_.jpg" width="200" height="200">
             <h2>ZEBRONICS-Transformer-M with a High-Performance Gold-Plated USB Mouse.</h2>
             <p>Gaming mouse: ZEB-Transformer-M premium gaming mouse is designed for gamers who want the perfect fusion of high DPI, precision gaming along with LED lights.</p>
             <p>₹433.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51eFgb4stIL._AC_UY327_FMwebp_QL65_.jpg" width="140" height="200">
             <h2>Ant Esports GM320 RGB Optical Wired Gaming Mouse</h2>
             <p>8 programmable buttons & Fire Button - support Macro editing, 8 mouse buttons can be programmed with Ant Esports easy-to-program gaming software. The rapid Fire button gives you the edge during intensive FPS battles.</p>
             <p>₹569.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/61MUoISbzjL._AC_UY327_FMwebp_QL65_.jpg" width="140" height="200">
             <h2>Redgear A-15 Wired Gaming Mouse with Upto 6400 DPI, RGB & Driver Customization for PC(Black)</h2>
             <p>Compatibility: Redgear A15 is compatible with PCs, laptops, notebooks and other devices with a similar input.</p>
             <p>₹549.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/71BmpO+jj7L._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
             <h2>MFTEK 2000 dpi LED Backlit USB Wired Unbreakable ABS Body Gaming Mouse (Black)</h2>
             <p>We built the mftek mouse as a competitive gaming mouse, in a world where milliseconds mean everything, the MFTEK does its job in microseconds.</p>
             <p>₹499.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/619VeLp0hIL._AC_UY327_FMwebp_QL65_.jpg" width="180" height="200">
             <h2>VIBOTON Gaming Mouse, Wired USB 2.0 Optical Mice, 3200 DPI LED Backlight 6 Button, 4 Color Breathing Lights with 1.5M Nylon Cable</h2>
             <p>4 Breathing Colours 4 different breathing colors, which keep switching automatically one after another.</p>
             <p>₹529.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
     </section>
     <h1 align="center">Graphic Cards</h1>
-    <section> 
+    <section class="box"> 
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/811TPx4a77L._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
             <h2>GEONIX GEFORCE GT 730LP 4GB DDR3 Graphic Card | 64bit Dual Slot | Multiple Outputs- VGA, HDMI, DVI | Support PCI-e2 Profile</h2>
@@ -298,9 +314,14 @@
                 Core Frequency- 700 MHz
                 Memory Bus- 1333 MHz</p>
             <p>₹2820.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/61w9O1yPrdL._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
@@ -309,9 +330,14 @@
                 PCIe 4.0 Support for Ultrafast Data Transfer Speeds</p>
             <br>
                 <p>₹21,260.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/71JOjF8Od9L._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
@@ -320,9 +346,14 @@
                 Integrated with 2GB GDDR5 64bit memory interface
                 Features Dual-link DVI-I / HDMI</p>
             <p>₹3,749.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51tsysj5SXL._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
@@ -333,9 +364,14 @@
                 Graphics Card Interface: Integrated</p>
             <br>
                 <p>₹3,779.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/81LkkH2bYNL._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
@@ -348,31 +384,46 @@
                 Heatsink with Fan</p>
                 <br>
             <p>₹1,680.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
     </section>
     <h1 align="center">Controllers</h1>
-    <section> 
+    <section class="box"> 
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/715vosKfRkL._SY450_.jpg" width="200" height="200">
             <h2>Zebronics MAX FURY Transparent RGB LED Illuminated Wired Gamepad.</h2>
             <p>ZEB-Max Fury gaming pad giving you a smoother gaming experience.</p>
             <br>
             <p>₹1349.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/61Q0EXcljgL._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
             <h2>EvoFox Elite Ops Wireless Gamepad for Google TV and Android TV |</h2>
             <p> 8+ Hours of Play Time | Zero Lag Connectivity Upto 12 Feet | USB Extender for TV Included.</p>
             <p>₹1424.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/61ehdFiF-FL._SX466_.jpg" width="200" height="180">
@@ -380,9 +431,14 @@
             <p>Compatible PS4 Dualshock Controller for ps4/Pc.</p>
             <br>
             <p>₹1899.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/51fCmfd8CML._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
@@ -390,23 +446,33 @@
             <p>2 analog sticks, 2 analog triggers, Turbo mode; 11 digital keys
                 X input and direct input, 10 meters of wireless connectivity.</p>
             <p>₹1671.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
         <div class="product">
             <img src="https://m.media-amazon.com/images/I/61xf2zTjBeL._AC_UY327_FMwebp_QL65_.jpg" width="200" height="200">
             <h2>Cosmic Byte Ares Wi-fi Gamepad  (Black, For PC, PS3)</h2>
             <p>Ergonomic Design and Rubbersied Textured Sticks for enhanced Grip Pressure Sensitive Analog Triggers and LED Backlit Buttons.</p>
             <p>₹1790.00</p>
+            <div class="button">
             <a href="Sorry.html">
                 <button>Order Now</button>
             </a>
+            <a href="Sorry.html">
+                <button>Add to Cart</button>
+            </a>
+            </div>
         </div>
     </section>
     <br><br>    <br><br>    <br><br>    <br><br>
     <footer>
-        <p>&copy; 2024 TECH_HUB.COM limited.</p>
+        <p>&copy; 2025 TECH_HUB.COM limited.</p>
     </footer>
 </body>
 </html>
