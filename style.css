@@ -1,0 +1,126 @@
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd500fa;
+            overflow-x: hidden;
+        }
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            font: 1.5em ink free;
+        }
+
+        /* Navigation styles */
+        
+        .sidenav {
+            height: 100%;  /* Full height */
+            width: 0;  /* 0 width - change this with JavaScript */
+            position: fixed;  /* Fixed Sidebar (stay in place on scroll) */
+            top: 0;  /* Stay at the top */
+            left: 0;
+            background-color: #333;  /* Black background color */
+            overflow-x: hidden;  /*Disable horizontal scroll */
+            padding-top: 50px;  /* Place content 60px from the top */
+            transition: 0.5s;  /* 0.5 second transition effect to slide in the sidenav */
+            font-family: Arial;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration:dashed;
+            font-size: 20px;
+            color: #818181;
+            display:block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .main {
+            transition: margin-left 0.5s;  /* Add transition to main content */
+            padding: 16px;
+            
+        }
+        .menu {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        } 
+        .logo {
+            /* padding: 0; */
+            margin: 0 auto;
+            display: inline-block;
+        }
+        /* Product styles */
+        .box {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product h2 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .product p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .product button {
+            background-color: #eeb804;
+            color: #fff;
+            border: none;
+            margin: 10px;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            
+            /* flex-wrap: wrap; */
+            
+        }
+        .product button:hover {
+            background-color: #000000;
+        }
+        .button {
+            /* padding: 0 auto; */
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
